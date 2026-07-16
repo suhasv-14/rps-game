@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-game
+spec:
+  containers:
+  - name: game-container
+    image: rps-game
+    imagePullPolicy: Never
+    volumeMounts:
+    - mountPath: /data
+      name: my-volume
+
+  volumes:
+  - name: my-volume
+    emptyDir: {}

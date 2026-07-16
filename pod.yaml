@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: game-manifest
+spec:
+  containers:
+  - name: game-container
+    image: rps-game
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 80
